@@ -32,8 +32,8 @@ class Dataset:
             preprocess(os.path.join(data_dir, data_name, filename), data_path, stat_path, sep)
 
         print('Read movielens data from %s' % data_path)
-        self.train_matrix, self.test_matrix, self.user_id_map, self.user_popularity, self.item_id_map, self.item_popularity, self.num_uesrs, self.num_items = load_data(
-            data_path)
+        self.train_matrix, self.test_matrix, self.org_train_matrix, self.org_test_matrix, self.user_id_map, self.user_popularity, self.item_id_map, self.item_popularity, \
+        self.num_users, self.num_items = load_data(data_path)
 
     def sparse_to_dict(self, sparse_matrix):
         ret_dict = {}

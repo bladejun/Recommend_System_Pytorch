@@ -9,11 +9,11 @@ def load_data(data_path):
     with open(data_path, 'rb') as f:
         data = pickle.load(f)
 
-    train_matrix, test_matrix, user_id_map, user_popularity, item_id_map, item_popularity, num_uesrs, num_items = \
-        data['train_mat'], data['test_mat'], data['user_id_dict'], data['user_popularity'], data['item_id_dict'], data[
-            'item_popularity'], data['num_users'], data['num_items']
+    train_matrix, test_matrix, org_train_matrix, org_test_matrix, user_id_map, user_popularity, item_id_map, item_popularity, num_users, num_items = \
+        data['train_mat'], data['test_mat'], data['org_train_mat'], data['org_test_mat'], data['user_id_dict'], data['user_popularity'], \
+        data['item_id_dict'], data['item_popularity'], data['num_users'], data['num_items']
 
-    return train_matrix, test_matrix, user_id_map, user_popularity, item_id_map, item_popularity, num_uesrs, num_items
+    return train_matrix, test_matrix, org_train_matrix, org_test_matrix, user_id_map, user_popularity, item_id_map, item_popularity, num_users, num_items
 
 
 def preprocess(data_path, save_path, stat_path, sep, train_ratio=0.8, binarize_threshold=0.0, order_by_popularity=True):
@@ -41,7 +41,9 @@ def preprocess(data_path, save_path, stat_path, sep, train_ratio=0.8, binarize_t
         print("Binarize ratings greater than or equal to %.f" % binarize_threshold)
         data = data[data['ratings'] >= binarize_threshold]
 
+
     # convert ratings into implicit feedback
+    data['org_ratings'] = data['ratings']
     data['ratings'] = 1.0
 
     num_items_by_user = data.groupby('user', as_index=False).size()
@@ -93,6 +95,7 @@ def preprocess(data_path, save_path, stat_path, sep, train_ratio=0.8, binarize_t
     # Split data into train/test
     print('Split data into train/test.')
     data_group = data.groupby('user')
+
     train_list, test_list = [], []
 
     num_zero_train = 0
@@ -125,13 +128,15 @@ def preprocess(data_path, save_path, stat_path, sep, train_ratio=0.8, binarize_t
     test_df = pd.concat(test_list)
     print('# zero train, test: %d, %d' % (num_zero_train, num_zero_test))
 
-    train_sparse = df_to_sparse(train_df, shape=(num_users, num_items))
-    test_sparse = df_to_sparse(test_df, shape=(num_users, num_items))
+    train_sparse, org_train_sparse = df_to_sparse(train_df, shape=(num_users, num_items))
+    test_sparse, org_test_sparse = df_to_sparse(test_df, shape=(num_users, num_items))
 
     # Save data and statistics
     data_to_save = {
         'train_mat': train_sparse,
         'test_mat': test_sparse,
+        'org_train_mat': org_train_sparse,
+        'org_test_mat': org_test_sparse,
         'user_id_dict': user_id_dict,
         'user_popularity': user_to_num_items,
         'item_id_dict': item_id_dict,
@@ -163,8 +168,10 @@ def preprocess(data_path, save_path, stat_path, sep, train_ratio=0.8, binarize_t
 def df_to_sparse(df, shape):
     rows, cols = df.user, df.item
     values = df.ratings
+    org_values = df.org_ratings
 
     sp_data = sp.csr_matrix((values, (rows, cols)), dtype='float64', shape=shape)
+    sp_data2 = sp.csr_matrix((org_values, (rows, cols)), dtype='float64', shape=shape)
 
     num_nonzeros = np.diff(sp_data.indptr)
     rows_to_drop = num_nonzeros == 0
@@ -172,4 +179,4 @@ def df_to_sparse(df, shape):
         print('%d empty users are dropped from matrix.' % sum(rows_to_drop))
         sp_data = sp_data[num_nonzeros != 0]
 
-    return sp_data
+    return sp_data, sp_data2
