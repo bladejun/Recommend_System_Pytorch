@@ -1,5 +1,6 @@
 import time
 import torch
+
 from utils.Table import Table
 
 class Trainer:
@@ -44,7 +45,7 @@ class Trainer:
             score_str = ' '.join(['%s=%.4f' % (m, score[m]) for m in score])
 
             self.logger.info('[Epoch %3d/%3d, epoch time: %.2f, train_time: %.2f] loss = %.4f, %s' % (
-            epoch, self.num_epochs, epoch_elapsed, train_elapsed, loss, score_str))
+                               epoch, self.num_epochs, epoch_elapsed, train_elapsed, loss, score_str))
 
             # update if ...
             standard = 'NDCG@100'

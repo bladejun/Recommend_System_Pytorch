@@ -1,8 +1,8 @@
 import os
 import time
-
 import numpy as np
 import scipy.sparse as sp
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -10,7 +10,7 @@ import torch.nn.functional as F
 from utils.Tools import apply_activation
 from models.BaseModel import BaseModel
 
-class ae(BaseModel):
+class AE(BaseModel):
     def __init__(self, model_conf, num_users, num_items, device):
         super(ae, self).__init__()
         self.data_name = model_conf.data_name

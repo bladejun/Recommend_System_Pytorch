@@ -1,0 +1,114 @@
+2021-02-12 18:01:49: ======== [Config] ========
+path: ./conf\ngcf.json
+data_name: ml-1m
+train_ratio: 0.8
+emb_dim: 64
+num_layers: 2
+node_dropout: 0.0
+mess_dropout: 0.1
+split: False
+num_folds: 100
+reg: 0.0001
+graph_dir: graph
+num_epochs: 300
+batch_size: 4096
+test_batch_size: 1024
+learning_rate: 0.001
+early_stop: True
+patience: 50
+top_k: [100]
+
+
+2021-02-12 18:01:49: ======== [Dataset] ========
+Number of Users : 6040
+Number of items : 3706
+Split ratio: 0.8
+
+
+2021-02-12 18:01:49: ======== [Config] ========
+path: ./conf\ngcf.json
+data_name: ml-1m
+train_ratio: 0.8
+emb_dim: 64
+num_layers: 2
+node_dropout: 0.0
+mess_dropout: 0.1
+split: False
+num_folds: 100
+reg: 0.0001
+graph_dir: graph
+num_epochs: 300
+batch_size: 4096
+test_batch_size: 1024
+learning_rate: 0.001
+early_stop: True
+patience: 50
+top_k: [100]
+
+
+2021-02-12 18:01:56: [Epoch   1/300, epoch time: 7.41, train_time: 2.01] loss = 1.3841, Prec@100=0.0467 Recall@100=0.1365 NDCG@100=0.0887 Nov@100=3.0771 Gini-D=0.3607
+2021-02-12 18:02:02: [Epoch   2/300, epoch time: 5.67, train_time: 0.98] loss = 1.3817, Prec@100=0.0670 Recall@100=0.2273 NDCG@100=0.1450 Nov@100=2.3858 Gini-D=0.3766
+2021-02-12 18:02:08: [Epoch   3/300, epoch time: 5.43, train_time: 0.97] loss = 1.3793, Prec@100=0.0743 Recall@100=0.2594 NDCG@100=0.1749 Nov@100=2.1851 Gini-D=0.3759
+2021-02-12 18:02:14: [Epoch   4/300, epoch time: 6.16, train_time: 0.91] loss = 1.3766, Prec@100=0.0780 Recall@100=0.2720 NDCG@100=0.1906 Nov@100=2.1139 Gini-D=0.3750
+2021-02-12 18:02:20: [Epoch   5/300, epoch time: 6.03, train_time: 0.96] loss = 1.3745, Prec@100=0.0802 Recall@100=0.2800 NDCG@100=0.1987 Nov@100=2.0688 Gini-D=0.3763
+2021-02-12 18:02:25: [Epoch   6/300, epoch time: 5.35, train_time: 0.92] loss = 1.3720, Prec@100=0.0815 Recall@100=0.2849 NDCG@100=0.2022 Nov@100=2.0476 Gini-D=0.3723
+2021-02-12 18:02:31: [Epoch   7/300, epoch time: 5.43, train_time: 0.89] loss = 1.3694, Prec@100=0.0821 Recall@100=0.2873 NDCG@100=0.2037 Nov@100=2.0380 Gini-D=0.3725
+2021-02-12 18:02:36: [Epoch   8/300, epoch time: 5.90, train_time: 0.94] loss = 1.3673, Prec@100=0.0828 Recall@100=0.2902 NDCG@100=0.2044 Nov@100=2.0298 Gini-D=0.3721
+2021-02-12 18:02:42: [Epoch   9/300, epoch time: 5.56, train_time: 0.96] loss = 1.3650, Prec@100=0.0831 Recall@100=0.2916 NDCG@100=0.2039 Nov@100=2.0202 Gini-D=0.3701
+2021-02-12 18:02:47: [Epoch  10/300, epoch time: 5.42, train_time: 0.93] loss = 1.3628, Prec@100=0.0833 Recall@100=0.2921 NDCG@100=0.2033 Nov@100=2.0170 Gini-D=0.3741
+2021-02-12 18:02:54: [Epoch  11/300, epoch time: 6.23, train_time: 0.84] loss = 1.3602, Prec@100=0.0835 Recall@100=0.2926 NDCG@100=0.2028 Nov@100=2.0132 Gini-D=0.3728
+2021-02-12 18:03:00: [Epoch  12/300, epoch time: 6.43, train_time: 1.01] loss = 1.3585, Prec@100=0.0836 Recall@100=0.2937 NDCG@100=0.2025 Nov@100=2.0085 Gini-D=0.3736
+2021-02-12 18:03:06: [Epoch  13/300, epoch time: 6.08, train_time: 0.90] loss = 1.3557, Prec@100=0.0837 Recall@100=0.2942 NDCG@100=0.2028 Nov@100=2.0051 Gini-D=0.3739
+2021-02-12 18:03:13: [Epoch  14/300, epoch time: 6.57, train_time: 0.95] loss = 1.3537, Prec@100=0.0839 Recall@100=0.2950 NDCG@100=0.2030 Nov@100=2.0025 Gini-D=0.3751
+2021-02-12 18:03:19: [Epoch  15/300, epoch time: 5.78, train_time: 0.91] loss = 1.3518, Prec@100=0.0840 Recall@100=0.2950 NDCG@100=0.2026 Nov@100=2.0004 Gini-D=0.3757
+2021-02-12 18:03:25: [Epoch  16/300, epoch time: 6.05, train_time: 0.95] loss = 1.3496, Prec@100=0.0841 Recall@100=0.2955 NDCG@100=0.2018 Nov@100=1.9988 Gini-D=0.3727
+2021-02-12 18:03:30: [Epoch  17/300, epoch time: 5.83, train_time: 1.00] loss = 1.3469, Prec@100=0.0842 Recall@100=0.2956 NDCG@100=0.2012 Nov@100=1.9978 Gini-D=0.3741
+2021-02-12 18:03:36: [Epoch  18/300, epoch time: 5.74, train_time: 0.95] loss = 1.3446, Prec@100=0.0843 Recall@100=0.2963 NDCG@100=0.2007 Nov@100=1.9979 Gini-D=0.3718
+2021-02-12 18:03:42: [Epoch  19/300, epoch time: 5.92, train_time: 0.95] loss = 1.3423, Prec@100=0.0844 Recall@100=0.2968 NDCG@100=0.1998 Nov@100=1.9975 Gini-D=0.3707
+2021-02-12 18:03:48: [Epoch  20/300, epoch time: 5.85, train_time: 0.88] loss = 1.3400, Prec@100=0.0845 Recall@100=0.2969 NDCG@100=0.1987 Nov@100=1.9962 Gini-D=0.3717
+2021-02-12 18:03:54: [Epoch  21/300, epoch time: 6.03, train_time: 0.97] loss = 1.3374, Prec@100=0.0845 Recall@100=0.2970 NDCG@100=0.1973 Nov@100=1.9952 Gini-D=0.3700
+2021-02-12 18:04:00: [Epoch  22/300, epoch time: 5.61, train_time: 0.96] loss = 1.3361, Prec@100=0.0846 Recall@100=0.2976 NDCG@100=0.1963 Nov@100=1.9941 Gini-D=0.3711
+2021-02-12 18:04:05: [Epoch  23/300, epoch time: 5.68, train_time: 0.93] loss = 1.3341, Prec@100=0.0848 Recall@100=0.2983 NDCG@100=0.1955 Nov@100=1.9935 Gini-D=0.3702
+2021-02-12 18:04:11: [Epoch  24/300, epoch time: 6.14, train_time: 0.96] loss = 1.3302, Prec@100=0.0847 Recall@100=0.2980 NDCG@100=0.1940 Nov@100=1.9933 Gini-D=0.3694
+2021-02-12 18:04:17: [Epoch  25/300, epoch time: 5.43, train_time: 1.01] loss = 1.3287, Prec@100=0.0847 Recall@100=0.2976 NDCG@100=0.1928 Nov@100=1.9943 Gini-D=0.3684
+2021-02-12 18:04:23: [Epoch  26/300, epoch time: 5.98, train_time: 0.95] loss = 1.3245, Prec@100=0.0847 Recall@100=0.2969 NDCG@100=0.1918 Nov@100=1.9953 Gini-D=0.3711
+2021-02-12 18:04:29: [Epoch  27/300, epoch time: 5.75, train_time: 0.90] loss = 1.3230, Prec@100=0.0848 Recall@100=0.2972 NDCG@100=0.1911 Nov@100=1.9962 Gini-D=0.3678
+2021-02-12 18:04:34: [Epoch  28/300, epoch time: 5.50, train_time: 0.94] loss = 1.3200, Prec@100=0.0848 Recall@100=0.2969 NDCG@100=0.1904 Nov@100=1.9973 Gini-D=0.3669
+2021-02-12 18:04:39: [Epoch  29/300, epoch time: 5.20, train_time: 0.90] loss = 1.3155, Prec@100=0.0847 Recall@100=0.2967 NDCG@100=0.1903 Nov@100=1.9996 Gini-D=0.3670
+2021-02-12 18:04:44: [Epoch  30/300, epoch time: 5.12, train_time: 0.91] loss = 1.3152, Prec@100=0.0847 Recall@100=0.2970 NDCG@100=0.1908 Nov@100=2.0030 Gini-D=0.3651
+2021-02-12 18:04:50: [Epoch  31/300, epoch time: 5.63, train_time: 0.94] loss = 1.3117, Prec@100=0.0847 Recall@100=0.2970 NDCG@100=0.1908 Nov@100=2.0055 Gini-D=0.3624
+2021-02-12 18:04:56: [Epoch  32/300, epoch time: 5.96, train_time: 0.86] loss = 1.3078, Prec@100=0.0845 Recall@100=0.2964 NDCG@100=0.1906 Nov@100=2.0090 Gini-D=0.3610
+2021-02-12 18:05:01: [Epoch  33/300, epoch time: 5.11, train_time: 0.96] loss = 1.3061, Prec@100=0.0843 Recall@100=0.2956 NDCG@100=0.1905 Nov@100=2.0127 Gini-D=0.3573
+2021-02-12 18:05:07: [Epoch  34/300, epoch time: 5.40, train_time: 0.99] loss = 1.3021, Prec@100=0.0841 Recall@100=0.2949 NDCG@100=0.1903 Nov@100=2.0146 Gini-D=0.3516
+2021-02-12 18:05:12: [Epoch  35/300, epoch time: 5.21, train_time: 0.92] loss = 1.3003, Prec@100=0.0840 Recall@100=0.2950 NDCG@100=0.1907 Nov@100=2.0163 Gini-D=0.3452
+2021-02-12 18:05:17: [Epoch  36/300, epoch time: 5.19, train_time: 0.93] loss = 1.2957, Prec@100=0.0840 Recall@100=0.2947 NDCG@100=0.1913 Nov@100=2.0160 Gini-D=0.3366
+2021-02-12 18:05:22: [Epoch  37/300, epoch time: 5.50, train_time: 0.85] loss = 1.2917, Prec@100=0.0839 Recall@100=0.2946 NDCG@100=0.1917 Nov@100=2.0165 Gini-D=0.3323
+2021-02-12 18:05:28: [Epoch  38/300, epoch time: 5.50, train_time: 0.98] loss = 1.2884, Prec@100=0.0838 Recall@100=0.2944 NDCG@100=0.1923 Nov@100=2.0176 Gini-D=0.3197
+2021-02-12 18:05:33: [Epoch  39/300, epoch time: 5.05, train_time: 0.90] loss = 1.2858, Prec@100=0.0838 Recall@100=0.2938 NDCG@100=0.1924 Nov@100=2.0183 Gini-D=0.3079
+2021-02-12 18:05:39: [Epoch  40/300, epoch time: 5.82, train_time: 0.92] loss = 1.2825, Prec@100=0.0836 Recall@100=0.2936 NDCG@100=0.1924 Nov@100=2.0189 Gini-D=0.2970
+2021-02-12 18:05:45: [Epoch  41/300, epoch time: 5.72, train_time: 0.95] loss = 1.2760, Prec@100=0.0835 Recall@100=0.2935 NDCG@100=0.1926 Nov@100=2.0202 Gini-D=0.2830
+2021-02-12 18:05:51: [Epoch  42/300, epoch time: 6.01, train_time: 0.95] loss = 1.2761, Prec@100=0.0835 Recall@100=0.2938 NDCG@100=0.1934 Nov@100=2.0212 Gini-D=0.2722
+2021-02-12 18:05:56: [Epoch  43/300, epoch time: 5.51, train_time: 0.91] loss = 1.2701, Prec@100=0.0836 Recall@100=0.2940 NDCG@100=0.1940 Nov@100=2.0216 Gini-D=0.2612
+2021-02-12 18:06:02: [Epoch  44/300, epoch time: 5.87, train_time: 0.93] loss = 1.2665, Prec@100=0.0835 Recall@100=0.2939 NDCG@100=0.1944 Nov@100=2.0211 Gini-D=0.2474
+2021-02-12 18:06:08: [Epoch  45/300, epoch time: 6.05, train_time: 0.94] loss = 1.2620, Prec@100=0.0835 Recall@100=0.2944 NDCG@100=0.1947 Nov@100=2.0205 Gini-D=0.2354
+2021-02-12 18:06:13: [Epoch  46/300, epoch time: 5.13, train_time: 0.99] loss = 1.2586, Prec@100=0.0836 Recall@100=0.2949 NDCG@100=0.1946 Nov@100=2.0204 Gini-D=0.2306
+2021-02-12 18:06:19: [Epoch  47/300, epoch time: 6.11, train_time: 0.95] loss = 1.2520, Prec@100=0.0835 Recall@100=0.2950 NDCG@100=0.1938 Nov@100=2.0211 Gini-D=0.2203
+2021-02-12 18:06:25: [Epoch  48/300, epoch time: 6.02, train_time: 1.00] loss = 1.2516, Prec@100=0.0835 Recall@100=0.2950 NDCG@100=0.1934 Nov@100=2.0211 Gini-D=0.2123
+2021-02-12 18:06:34: [Epoch  49/300, epoch time: 9.24, train_time: 0.89] loss = 1.2467, Prec@100=0.0834 Recall@100=0.2951 NDCG@100=0.1934 Nov@100=2.0209 Gini-D=0.2050
+2021-02-12 18:06:48: [Epoch  50/300, epoch time: 13.75, train_time: 1.35] loss = 1.2407, Prec@100=0.0835 Recall@100=0.2957 NDCG@100=0.1937 Nov@100=2.0207 Gini-D=0.1979
+2021-02-12 18:07:02: [Epoch  51/300, epoch time: 13.58, train_time: 1.60] loss = 1.2361, Prec@100=0.0835 Recall@100=0.2963 NDCG@100=0.1942 Nov@100=2.0206 Gini-D=0.1926
+2021-02-12 18:07:16: [Epoch  52/300, epoch time: 14.44, train_time: 1.96] loss = 1.2318, Prec@100=0.0835 Recall@100=0.2962 NDCG@100=0.1945 Nov@100=2.0200 Gini-D=0.1857
+2021-02-12 18:07:30: [Epoch  53/300, epoch time: 13.75, train_time: 1.50] loss = 1.2267, Prec@100=0.0836 Recall@100=0.2971 NDCG@100=0.1951 Nov@100=2.0196 Gini-D=0.1811
+2021-02-12 18:07:44: [Epoch  54/300, epoch time: 14.16, train_time: 2.06] loss = 1.2207, Prec@100=0.0836 Recall@100=0.2981 NDCG@100=0.1961 Nov@100=2.0201 Gini-D=0.1775
+2021-02-12 18:07:59: [Epoch  55/300, epoch time: 14.39, train_time: 2.15] loss = 1.2162, Prec@100=0.0836 Recall@100=0.2979 NDCG@100=0.1969 Nov@100=2.0201 Gini-D=0.1742
+2021-02-12 18:08:14: [Epoch  56/300, epoch time: 15.11, train_time: 2.53] loss = 1.2110, Prec@100=0.0837 Recall@100=0.2984 NDCG@100=0.1980 Nov@100=2.0217 Gini-D=0.1728
+2021-02-12 18:08:26: [Epoch  57/300, epoch time: 12.80, train_time: 1.73] loss = 1.2115, Prec@100=0.0837 Recall@100=0.2986 NDCG@100=0.1984 Nov@100=2.0235 Gini-D=0.1710
+2021-02-12 18:08:40: [Epoch  58/300, epoch time: 13.40, train_time: 1.96] loss = 1.2059, Prec@100=0.0837 Recall@100=0.2990 NDCG@100=0.1985 Nov@100=2.0246 Gini-D=0.1719
+2021-02-12 18:08:40: 
+Scores
+================================================================================
+|| NAME            || Prec@100 || Recall@100 || NDCG@100 || Nov@100 || Gini-D ||
+||----------------------------------------------------------------------------||
+|| Best at epoch 8 || 0.0828   || 0.2902     || 0.2044   || 2.0298  || 0.3721 ||
+================================================================================
+

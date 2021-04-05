@@ -1,0 +1,41 @@
+2021-02-10 18:29:17: ======== [Config] ========
+path: ./conf\ae.json
+data_name: ml-1m
+train_ratio: 0.8
+hidden_neuron: 100
+lambda_value: 0.01
+num_epochs: 300
+batch_size: 4096
+test_batch_size: 1024
+learning_rate: 0.001
+early_stop: True
+patience: 50
+top_k: [100]
+
+
+2021-02-10 18:29:17: ======== [Dataset] ========
+Number of Users : 6040
+Number of items : 3706
+Split ratio: 0.8
+
+
+2021-02-10 18:29:17: ======== [Config] ========
+path: ./conf\ae.json
+data_name: ml-1m
+train_ratio: 0.8
+hidden_neuron: 100
+lambda_value: 0.01
+num_epochs: 300
+batch_size: 4096
+test_batch_size: 1024
+learning_rate: 0.001
+early_stop: True
+patience: 50
+top_k: [100]
+
+
+2021-02-10 18:29:24: [Epoch   1/300, epoch time: 6.78, train_time: 1.15] loss = 2822966.5000, Prec@100=0.0111 Recall@100=0.0312 NDCG@100=0.0191 Nov@100=5.8384 Gini-D=0.3470
+2021-02-10 18:29:31: [Epoch   2/300, epoch time: 7.14, train_time: 1.03] loss = 2536123.7500, Prec@100=0.0113 Recall@100=0.0322 NDCG@100=0.0194 Nov@100=5.7811 Gini-D=0.3866
+2021-02-10 18:29:37: [Epoch   3/300, epoch time: 6.16, train_time: 0.99] loss = 2271519.5000, Prec@100=0.0116 Recall@100=0.0330 NDCG@100=0.0200 Nov@100=5.6939 Gini-D=0.3960
+2021-02-10 18:29:43: [Epoch   4/300, epoch time: 6.29, train_time: 0.99] loss = 1993372.8750, Prec@100=0.0119 Recall@100=0.0339 NDCG@100=0.0205 Nov@100=5.6372 Gini-D=0.4377
+2021-02-10 18:29:51: [Epoch   5/300, epoch time: 7.40, train_time: 0.97] loss = 1710187.2500, Prec@100=0.0120 Recall@100=0.0348 NDCG@100=0.0209 Nov@100=5.5819 Gini-D=0.4578

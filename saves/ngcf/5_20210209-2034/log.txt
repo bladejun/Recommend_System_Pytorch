@@ -1,0 +1,51 @@
+2021-02-09 20:34:00: ======== [Config] ========
+path: ./conf\ngcf.json
+data_name: ml-1m
+train_ratio: 0.8
+emb_dim: 64
+num_layers: 2
+node_dropout: 0.0
+mess_dropout: 0.1
+split: False
+num_folds: 100
+reg: 0.0001
+graph_dir: graph
+num_epochs: 300
+batch_size: 4096
+test_batch_size: 1024
+learning_rate: 0.001
+early_stop: True
+patience: 50
+top_k: [100]
+
+
+2021-02-09 20:34:00: ======== [Dataset] ========
+Number of Users : 6040
+Number of items : 3706
+Split ratio: 0.8
+
+
+2021-02-09 20:34:00: ======== [Config] ========
+path: ./conf\ngcf.json
+data_name: ml-1m
+train_ratio: 0.8
+emb_dim: 64
+num_layers: 2
+node_dropout: 0.0
+mess_dropout: 0.1
+split: False
+num_folds: 100
+reg: 0.0001
+graph_dir: graph
+num_epochs: 300
+batch_size: 4096
+test_batch_size: 1024
+learning_rate: 0.001
+early_stop: True
+patience: 50
+top_k: [100]
+
+
+2021-02-09 20:34:06: [Epoch   1/300, epoch time: 5.83, train_time: 1.78] loss = 1.3841, Prec@100=0.0467 Recall@100=0.1365 NDCG@100=0.0887 Nov@100=3.0771 Gini-D=0.3607
+2021-02-09 20:34:11: [Epoch   2/300, epoch time: 4.92, train_time: 0.91] loss = 1.3817, Prec@100=0.0670 Recall@100=0.2273 NDCG@100=0.1450 Nov@100=2.3858 Gini-D=0.3766
+2021-02-09 20:34:16: [Epoch   3/300, epoch time: 4.90, train_time: 0.92] loss = 1.3793, Prec@100=0.0743 Recall@100=0.2594 NDCG@100=0.1749 Nov@100=2.1851 Gini-D=0.3759

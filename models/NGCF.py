@@ -1,9 +1,8 @@
 import os
-import math
 import time
-
 import numpy as np
 import scipy.sparse as sp
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -11,7 +10,7 @@ import torch.nn.functional as F
 from models.BaseModel import BaseModel
 
 
-class ngcf(BaseModel):
+class NGCF(BaseModel):
     def __init__(self, model_conf, num_user, num_item, device):
         super(ngcf, self).__init__()
         self.data_name = model_conf.data_name
@@ -31,6 +30,7 @@ class ngcf(BaseModel):
 
         self.Graph = None
         self.data_loader = None
+
         self.path = model_conf.graph_dir
         if not os.path.exists(self.path):
             os.mkdir(self.path)
@@ -41,7 +41,6 @@ class ngcf(BaseModel):
 
     def build_graph(self):
         # Variable
-        # torch.ones(self.num_users, self.emb_dim)
         self.user_embedding = nn.Embedding(self.num_users, self.emb_dim)
         self.item_embedding = nn.Embedding(self.num_items, self.emb_dim)
         nn.init.normal_(self.user_embedding.weight, 0, 0.01)
@@ -69,11 +68,14 @@ class ngcf(BaseModel):
         if self.Graph == None:
             self.Graph = self.getSparseGraph(train_matrix)
         if self.data_loader == None:
-            self.data_loader = PairwiseGenerator(train_matrix, num_negatives=1, batch_size=self.batch_size,
-                                                 shuffle=True, device=self.device)
+            self.data_loader = PairwiseGenerator(train_matrix,
+                                                 num_negatives=1,
+                                                 batch_size=self.batch_size,
+                                                 shuffle=True,
+                                                 device=self.device)
 
         loss = 0.0
-        for b, batch_data in enumerate(self.data_loader):
+        for idx, batch_data in enumerate(self.data_loader):
             optimizer.zero_grad()
             batch_user, batch_pos, batch_neg = batch_data
 
@@ -93,8 +95,8 @@ class ngcf(BaseModel):
 
             loss += batch_loss
 
-            if verbose and b % 50 == 0:
-                print('(%3d / %3d) loss = %.4f' % (b, num_batches, batch_loss))
+            if verbose and idx % 50 == 0:
+                print('(%3d / %3d) loss = %.4f' % (idx, num_batches, batch_loss))
         return loss
 
     def getSparseGraph(self, rating_matrix):
