@@ -120,10 +120,6 @@ class LightGCN(BaseModel):
 
         return pred_matrix
 
-
-
-
-
     def before_evaluate(self):
         self.user_embedding_pred, self.item_embedding_pred = self.lightgcn_embedding(self.Graph)
 

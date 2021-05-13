@@ -12,7 +12,7 @@ from models.BaseModel import BaseModel
 
 class NGCF(BaseModel):
     def __init__(self, model_conf, num_user, num_item, device):
-        super(ngcf, self).__init__()
+        super(NGCF, self).__init__()
         self.data_name = model_conf.data_name
         self.num_users = num_user
         self.num_items = num_item

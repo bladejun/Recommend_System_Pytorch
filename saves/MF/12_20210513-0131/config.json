@@ -1,0 +1,18 @@
+{
+    "path": "./conf\\mf.json",
+    "data_name": "ml-1m",
+    "train_ratio": 0.8,
+    "hidden_dim": 64,
+    "split": false,
+    "reg": 0.0001,
+    "pointwise": true,
+    "num_epochs": 300,
+    "batch_size": 4096,
+    "test_batch_size": 1024,
+    "learning_rate": 0.001,
+    "early_stop": true,
+    "patience": 50,
+    "top_k": [
+        100
+    ]
+}

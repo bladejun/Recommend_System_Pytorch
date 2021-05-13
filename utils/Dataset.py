@@ -72,7 +72,11 @@ class Dataset:
                 positives += [pos] * num_negatives
                 negatives += neg_items[i * num_negatives: (i + 1) * num_negatives].tolist()
 
-        return torch.LongTensor(users), torch.LongTensor(positives), torch.LongTensor(negatives)
+        if self.device == 'cpu':
+            return torch.LongTensor(users), torch.LongTensor(positives), torch.LongTensor(negatives)
+
+        elif self.device == 'gpu':
+            return torch.cuda.LongTensor(users), torch.cuda.LongTensor(positives), torch.cuda.LongTensor(negatives)
 
     def __str__(self):
         # return string representation of 'Dataset' class
